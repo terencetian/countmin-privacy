@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>支持与联系 · 分刻 Countmin / Support &amp; Contact</title>
+<style>
+  :root {
+    --ink: #1f2440;
+    --sub: #5b6280;
+    --accent: #3d6be0;
+    --paper: #ffffff;
+    --bg: #f6f7fb;
+    --line: #e7e9f2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px 64px; }
+  header { padding: 56px 0 32px; }
+  .mark {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 54px; height: 54px; border-radius: 16px;
+    background: linear-gradient(145deg, #4a7cf0, #2f56c9);
+    color: #fff; font-size: 26px; font-weight: 600; margin-bottom: 18px;
+  }
+  h1 { font-size: 30px; line-height: 1.3; margin: 0 0 8px; letter-spacing: -0.02em; }
+  .meta { color: var(--sub); font-size: 14px; }
+  .langbar { display: flex; gap: 6px; margin-top: 18px; }
+  .langbar button {
+    font: inherit; font-size: 13px; font-weight: 600;
+    padding: 6px 16px; border-radius: 999px; cursor: pointer;
+    border: 1px solid var(--line); background: var(--paper); color: var(--sub);
+    transition: background .15s, color .15s, border-color .15s;
+  }
+  .langbar button.active {
+    background: var(--accent); border-color: var(--accent); color: #fff;
+  }
+  .card {
+    background: var(--paper); border-radius: 18px; padding: 28px 30px;
+    box-shadow: 0 1px 3px rgba(31,36,64,.04), 0 8px 24px rgba(31,36,64,.04);
+  }
+  h2 { font-size: 19px; margin: 34px 0 12px; padding-top: 8px; }
+  h2:first-child { margin-top: 0; }
+  p { margin: 0 0 14px; font-size: 15.5px; }
+  ul { margin: 0 0 14px; padding-left: 22px; font-size: 15.5px; }
+  li { margin-bottom: 8px; }
+  .callout {
+    background: #f0f5ff; border-left: 4px solid var(--accent);
+    border-radius: 10px; padding: 16px 18px; margin: 20px 0;
+    font-size: 15.5px;
+  }
+  .step {
+    display: block; padding: 14px 18px; margin: 12px 0;
+    border: 1px solid var(--line); border-radius: 12px;
+    text-decoration: none; color: var(--ink); background: var(--paper);
+  }
+  .step strong { display: block; color: var(--accent); font-size: 15.5px; }
+  .step span { font-size: 14.5px; color: var(--sub); }
+  .step:hover { border-color: var(--accent); text-decoration: none; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  footer { text-align: center; color: var(--sub); font-size: 13px; margin-top: 34px; }
+  [data-lang] { display: none; }
+  [data-lang].shown { display: block; }
+  @media (max-width: 520px) {
+    header { padding: 36px 0 24px; }
+    h1 { font-size: 25px; }
+    .card { padding: 22px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="mark">刻</div>
+    <h1 data-lang="zh">分刻 Countmin · 支持与联系</h1>
+    <h1 data-lang="en">Countmin · Support &amp; Contact</h1>
+    <div class="meta" data-lang="zh">问题的正交入口 · 纯本机应用，无需账号</div>
+    <div class="meta" data-lang="en">A direct channel for questions · Local-only app, no account required</div>
+    <div class="langbar">
+      <button type="button" data-set-lang="zh">中文</button>
+      <button type="button" data-set-lang="en">English</button>
+    </div>
+  </header>
+
+  <div class="card" data-lang="zh">
+    <div class="callout">
+      分刻是一款完全在本机运行的时间手帐应用，没有账号、没有服务器、不收集数据。反馈问题时，请尽量附上设备型号、系统版本、App 版本与复现步骤，这样能更快定位。
+    </div>
+
+    <h2>联系方式</h2>
+    <a class="step" href="https://github.com/terencetian/countmin-privacy/issues" target="_blank" rel="noopener">
+      <strong>GitHub Issues（推荐）</strong>
+      <span>打开公开问题列表，点右上角「New issue」描述你的问题或建议。无需 App 账号，GitHub 账号即可。</span>
+    </a>
+    <p>如果你是通过 TestFlight 安装的测试用户，也可以直接使用 TestFlight App 内置的评价与反馈入口，反馈会连同设备信息一起送达。</p>
+
+    <h2>提交反馈前请确认</h2>
+    <ul>
+      <li>App 版本：在「设置 → 关于」查看版本号与 build 号。</li>
+      <li>复现步骤：做了什么操作、期待什么结果、实际发生了什么。</li>
+      <li>数据相关：分刻不提供云同步，跨设备迁移请用「更多 → 数据管理」的本地备份导出与导入。</li>
+      <li>隐私相关：应用不申请网络权限，也不含第三方 SDK；详见<a href="https://terencetian.github.io/countmin-privacy/">隐私政策</a>。</li>
+    </ul>
+
+    <h2>常见问题</h2>
+    <p><strong>卸载后数据还在吗？</strong>不在。分刻只把记录存在当前设备，卸载或使用「清除所有数据」都会删除本机记录，且无法由开发者恢复。请定期在「更多 → 数据管理」导出备份。</p>
+    <p><strong>iPhone 和 iPad 怎么同步？</strong>分刻没有云同步。请在旧设备导出 JSON 备份，再在新设备导入；导入会覆盖目标设备上的同份数据。</p>
+    <p><strong>iPad 上布局为什么和 iPhone 不同？</strong>iPad 横屏为左右双栏，竖屏与 iPhone 一致为单列，属于设计口径，不是故障。</p>
+  </div>
+
+  <div class="card" data-lang="en">
+    <div class="callout">
+      Countmin is a time-journal app that runs entirely on your device. There is no account, no server, and no data collection. When reporting an issue, please include your device model, iOS version, app version, and steps to reproduce.
+    </div>
+
+    <h2>Contact</h2>
+    <a class="step" href="https://github.com/terencetian/countmin-privacy/issues" target="_blank" rel="noopener">
+      <strong>GitHub Issues (recommended)</strong>
+      <span>Open the public issue list and tap "New issue" to describe your question or suggestion. No app account needed — just a GitHub account.</span>
+    </a>
+    <p>If you installed the app through TestFlight, you can also use the built-in rating and feedback option in the TestFlight app; device details are included automatically.</p>
+
+    <h2>Before you send feedback</h2>
+    <ul>
+      <li>App version: check under "Settings → About" for the version and build number.</li>
+      <li>Steps to reproduce: what you did, what you expected, and what actually happened.</li>
+      <li>Data: Countmin has no cloud sync. Move data between devices via local backup export/import under "More → Data Management".</li>
+      <li>Privacy: the app requests no network permission and contains no third-party SDKs. See the <a href="https://terencetian.github.io/countmin-privacy/">Privacy Policy</a>.</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <p><strong>Is my data kept after uninstalling?</strong> No. Records live only on the current device. Uninstalling or using "Clear All Data" deletes them permanently, and the developer cannot restore them. Export a backup regularly under "More → Data Management".</p>
+    <p><strong>How do I sync between iPhone and iPad?</strong> Countmin has no cloud sync. Export a JSON backup on the old device and import it on the new one; importing overwrites the matching data on the target device.</p>
+    <p><strong>Why does iPad look different from iPhone?</strong> iPad uses a two-column layout in landscape and the same single-column layout as iPhone in portrait. This is intentional, not a bug.</p>
+  </div>
+
+  <footer>
+    <span data-lang="zh">© 2026 分刻 Countmin · <a href="https://terencetian.github.io/countmin-privacy/">隐私政策</a></span>
+    <span data-lang="en">© 2026 Countmin · <a href="https://terencetian.github.io/countmin-privacy/">Privacy Policy</a></span>
+  </footer>
+</div>
+<script>
+  (function () {
+    var KEY = "countmin.support.lang";
+    var stored = null;
+    try { stored = localStorage.getItem(KEY); } catch (e) {}
+    var lang = stored || ((navigator.language || "").toLowerCase().indexOf("zh") === 0 ? "zh" : "en");
+    function apply(next) {
+      document.querySelectorAll("[data-lang]").forEach(function (el) {
+        el.classList.toggle("shown", el.getAttribute("data-lang") === next);
+      });
+      document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+        btn.classList.toggle("active", btn.getAttribute("data-set-lang") === next);
+      });
+      document.documentElement.lang = next === "zh" ? "zh-CN" : "en";
+      try { localStorage.setItem(KEY, next); } catch (e) {}
+    }
+    apply(lang);
+    document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+      btn.addEventListener("click", function () { apply(btn.getAttribute("data-set-lang")); });
+    });
+  })();
+</script>
+</body>
+</html>
