@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>隐私政策 · 小刻手帐 XIAOKE NOTES</title>
+<style>
+  :root {
+    --ink: #1f2440;
+    --sub: #5b6280;
+    --accent: #166fef;
+    --paper: #ffffff;
+    --bg: #f6f7fb;
+    --line: #e7e9f2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px 64px; }
+  header { padding: 56px 0 32px; }
+  .mark {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 54px; height: 54px; border-radius: 16px;
+    background: linear-gradient(145deg, #4a9df0, #166fef);
+    color: #fff; font-size: 26px; font-weight: 600; margin-bottom: 18px;
+  }
+  h1 { font-size: 30px; line-height: 1.3; margin: 0 0 8px; letter-spacing: -0.02em; }
+  .meta { color: var(--sub); font-size: 14px; }
+  .nav { display: flex; gap: 8px; margin-top: 18px; flex-wrap: wrap; }
+  .nav a {
+    font-size: 13px; font-weight: 600; text-decoration: none;
+    padding: 6px 16px; border-radius: 999px;
+    border: 1px solid var(--line); background: var(--paper); color: var(--sub);
+    transition: background .15s, color .15s, border-color .15s;
+  }
+  .nav a.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .card {
+    background: var(--paper); border-radius: 18px; padding: 28px 30px;
+    box-shadow: 0 1px 3px rgba(31,36,64,.04), 0 8px 24px rgba(31,36,64,.04);
+  }
+  h2 { font-size: 19px; margin: 34px 0 12px; padding-top: 8px; }
+  h2:first-child { margin-top: 0; }
+  p { margin: 0 0 14px; font-size: 15.5px; }
+  ul { margin: 0 0 14px; padding-left: 22px; font-size: 15.5px; }
+  li { margin-bottom: 6px; }
+  .callout {
+    background: #eff6ff; border-left: 4px solid var(--accent);
+    border-radius: 10px; padding: 16px 18px; margin: 20px 0;
+    font-size: 15.5px;
+  }
+  a { color: var(--accent); }
+  footer { text-align: center; color: var(--sub); font-size: 13px; margin-top: 34px; }
+  @media (max-width: 520px) {
+    header { padding: 36px 0 24px; }
+    h1 { font-size: 25px; }
+    .card { padding: 22px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="mark">刻</div>
+    <h1>小刻手帐 · 隐私政策</h1>
+    <div class="meta">XIAOKE NOTES · 你的私人记录本　·　生效日期：2026 年 11 月 25 日</div>
+    <div class="nav">
+      <a class="active" href="xiaoke.html">隐私政策</a>
+      <a href="xiaoke-faq.html">常见问题 FAQ</a>
+      <a href="index.html">分刻 Countmin</a>
+    </div>
+  </header>
+
+  <div class="card">
+    <div class="callout">
+      <strong>一句话总结：</strong>小刻手帐是一款本地优先的私人记录本。你的文字、图片、语音记录默认只保存在当前设备；应用自身不联网、不接第三方 SDK、不接入大模型，没有账号系统，也没有自有服务器。仅在你主动使用时，个别功能会调用苹果官方系统接口，由系统按 Apple 规范处理。
+    </div>
+
+    <h2>一、我们收集哪些信息</h2>
+    <p><strong>不收集任何个人信息。</strong>小刻手帐没有账号系统，不需要注册或登录，不要求提供姓名、电话号码、电子邮箱、住址或其他身份信息。应用不含广告、数据分析、用户行为追踪或任何第三方统计 SDK。</p>
+    <p>开发者无法读取、访问或导出你的任何记录。</p>
+
+    <h2>二、数据存放在哪里</h2>
+    <p>你产生的全部内容——对话消息、文字备忘、图片、语音及其转写文本、头像设置与界面偏好——默认只保存在当前设备的本地存储（SwiftData）中。卸载应用会一并删除本机数据且无法恢复，请按需自行备份。</p>
+    <ul>
+      <li>所有记录仅保存在当前设备的本地存储，开发者无法读取；</li>
+      <li>应用没有账号系统、没有自有服务器；</li>
+      <li>iCloud / CloudKit 私有数据库备份为可选能力，仅在你配置的 Apple 账户支持时启用；未配置时应用自动使用纯本地库，不会上传任何数据；</li>
+      <li>启用 iCloud 后，数据同步由 Apple 的 CloudKit 私有数据库处理，仅对你的 Apple 账户可见，开发者无法访问。</li>
+    </ul>
+
+    <h2>三、关于照片与相册</h2>
+    <p>当你选择图片作为消息或自定义头像时，应用通过系统提供的照片选择器读取你<strong>主动选中</strong>的图片。该过程在系统提供的独立环境中完成：</p>
+    <ul>
+      <li>应用不会申请完整相册访问权限，也无法浏览你未选中的照片；</li>
+      <li>选中的图片压缩后只保存在本机，不会上传到开发者服务器或第三方服务。</li>
+    </ul>
+
+    <h2>四、麦克风、语音识别与网络范围</h2>
+    <p>小刻手帐的<strong>应用自身不主动联网</strong>：不发起任何自有网络请求、不接入自有后端或第三方 API、不含统计/广告/社交登录服务。</p>
+    <p>以下功能会调用苹果官方系统接口，相关能力由 iOS 系统提供，是否联网由系统按 Apple 规范决定，属于系统服务行为，不代表应用联网：</p>
+    <ul>
+      <li><strong>语音录制</strong>：使用系统录音能力，需你授权麦克风权限；录音文件只存在本机。</li>
+      <li><strong>语音转文本</strong>：使用 Apple Speech 框架的语音识别，需你授权语音识别权限。识别过程遵循 Apple 的官方政策，可能由系统在设备本地处理，也可能由系统使用其识别服务完成。应用不自行上传音频，也不接触识别服务的任何数据。</li>
+    </ul>
+    <p>你可以在 iOS「设置 → 隐私与安全性 → 语音识别 / 麦克风」中随时关闭相关权限；关闭后对应功能不可用，但其余记录功能不受影响。</p>
+
+    <h2>五、关于 AI</h2>
+    <p>小刻手帐当前版本<strong>不接入任何大模型或 AI 能力</strong>。小刻的回复由应用内置的简单规则在本地生成，仅用于确认收纳，不参与任何决策，你的记录不会被发送给任何模型或服务进行分析。</p>
+
+    <h2>六、儿童隐私</h2>
+    <p>小刻手帐不面向 13 岁以下的儿童，也不会有意收集任何儿童的个人信息。如果你发现儿童向我们提供了个人信息，请通过下方方式联系我们，我们会尽快删除。</p>
+
+    <h2>七、数据的删除与控制</h2>
+    <p>你可以随时在「我的 → 清空所有记录」删除本机保存的全部内容；该操作不可撤销，请谨慎使用。若启用了 iCloud，删除会同步到你的其他设备。头像可在「我的 → 个性化」恢复为默认。</p>
+
+    <h2>八、联系我们</h2>
+    <p>如对本隐私政策有任何疑问或请求，请通过 GitHub 账户 <a href="https://github.com/terencetian" target="_blank" rel="noopener">github.com/terencetian</a> 联系开发者。</p>
+
+    <h2>九、政策更新</h2>
+    <p>本政策可能随应用功能调整而更新。更新后会在此页面修订生效日期与更新说明。重大变更会在应用内提示。</p>
+  </div>
+
+  <footer>© 2026 XIAOKE NOTES · 小刻手帐　·　本地优先，你的记录只属于你</footer>
+</div>
+</body>
+</html>

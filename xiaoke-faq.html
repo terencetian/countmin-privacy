@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>常见问题 FAQ · 小刻手帐 XIAOKE NOTES</title>
+<style>
+  :root {
+    --ink: #1f2440;
+    --sub: #5b6280;
+    --accent: #166fef;
+    --paper: #ffffff;
+    --bg: #f6f7fb;
+    --line: #e7e9f2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px 64px; }
+  header { padding: 56px 0 32px; }
+  .mark {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 54px; height: 54px; border-radius: 16px;
+    background: linear-gradient(145deg, #4a9df0, #166fef);
+    color: #fff; font-size: 26px; font-weight: 600; margin-bottom: 18px;
+  }
+  h1 { font-size: 30px; line-height: 1.3; margin: 0 0 8px; letter-spacing: -0.02em; }
+  .meta { color: var(--sub); font-size: 14px; }
+  .nav { display: flex; gap: 8px; margin-top: 18px; flex-wrap: wrap; }
+  .nav a {
+    font-size: 13px; font-weight: 600; text-decoration: none;
+    padding: 6px 16px; border-radius: 999px;
+    border: 1px solid var(--line); background: var(--paper); color: var(--sub);
+    transition: background .15s, color .15s, border-color .15s;
+  }
+  .nav a.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .card {
+    background: var(--paper); border-radius: 18px; padding: 12px 30px;
+    box-shadow: 0 1px 3px rgba(31,36,64,.04), 0 8px 24px rgba(31,36,64,.04);
+  }
+  details { border-bottom: 1px solid var(--line); padding: 16px 0; }
+  details:last-child { border-bottom: 0; }
+  summary {
+    cursor: pointer; font-size: 16px; font-weight: 600; list-style: none;
+    display: flex; align-items: center; gap: 10px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::before {
+    content: "+"; color: var(--accent); font-size: 20px; font-weight: 400;
+    width: 18px; text-align: center; flex: none;
+  }
+  details[open] summary::before { content: "−"; }
+  .answer { padding: 10px 0 2px 28px; font-size: 15px; color: var(--sub); }
+  .answer p { margin: 0 0 10px; }
+  .answer ul { margin: 0 0 10px; padding-left: 20px; }
+  a { color: var(--accent); }
+  footer { text-align: center; color: var(--sub); font-size: 13px; margin-top: 34px; }
+  .hint {
+    background: #eff6ff; border-left: 4px solid var(--accent);
+    border-radius: 10px; padding: 14px 18px; margin: 0 0 18px; font-size: 15px;
+  }
+  @media (max-width: 520px) {
+    header { padding: 36px 0 24px; }
+    h1 { font-size: 25px; }
+    .card { padding: 8px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="mark">刻</div>
+    <h1>小刻手帐 · 常见问题</h1>
+    <div class="meta">XIAOKE NOTES · 你的私人记录本</div>
+    <div class="nav">
+      <a href="xiaoke.html">隐私政策</a>
+      <a class="active" href="xiaoke-faq.html">常见问题 FAQ</a>
+      <a href="index.html">分刻 Countmin</a>
+    </div>
+  </header>
+
+  <div class="hint">点击下面的问题展开答案。更多隐私细节请见 <a href="xiaoke.html">隐私政策</a>。</div>
+
+  <div class="card">
+    <details open>
+      <summary>小刻手帐会联网吗？</summary>
+      <div class="answer">
+        <p><strong>应用自身不联网</strong>：没有自有服务器、账号系统或第三方 SDK，不上传你的任何记录。</p>
+        <p>个别功能会调用苹果官方系统接口——例如语音转文本使用 Apple Speech 框架。是否联网由 iOS 系统按 Apple 规范决定，属于系统服务行为，不代表应用联网。你可在系统设置中关闭麦克风与语音识别权限。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>我的记录保存在哪里？会丢吗？</summary>
+      <div class="answer">
+        <p>默认只保存在当前设备的本地存储中。卸载应用、清除数据或设备丢失都会导致记录无法恢复，请自行注意备份。</p>
+        <p>iCloud / CloudKit 私有数据库备份为可选能力，仅在支持的 Apple 账户配置下启用；未配置时自动使用纯本地库。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>小刻会帮我做决定吗？它接入 AI 了吗？</summary>
+      <div class="answer">
+        <p>不会。小刻只帮你<strong>归纳和收纳</strong>，不参与决策。当前版本不接入任何大模型或 AI 能力，回复由本地简单规则生成，你的记录不会被发送给任何模型分析。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>三个 Tab 分别是什么？</summary>
+      <div class="answer">
+        <ul>
+          <li><strong>对话</strong>：给小刻发文字、图片、语音，它会帮你收好；支持陪伴模式与树洞模式。</li>
+          <li><strong>仓库</strong>：按类别查看收藏的内容，支持月历视图按日期检索。</li>
+          <li><strong>我的</strong>：设置头像、偏好，查看统计与关于信息。</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>陪伴模式和树洞模式有什么区别？</summary>
+      <div class="answer">
+        <p><strong>陪伴模式</strong>：小刻会对你的每条记录给出简单回应，帮你确认已收好。</p>
+        <p><strong>树洞模式</strong>：只有你自己能看到你说的话，小刻不回复、不打扰，适合纯粹记录心情。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>语音转文本失败怎么办？</summary>
+      <div class="answer">
+        <p>先确认系统「设置 → 隐私与安全性 → 语音识别」已授权，并保持设备网络可用（系统识别可能需要）。</p>
+        <p>长按语音消息，选择「重新转文本」即可重试；也可以「关闭转写文本」只看语音。识别结果会直接显示在语音气泡下方。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>如何更换或恢复头像？</summary>
+      <div class="answer">
+        <p>在「我的 → 个性化」点击头像即可从相册选择并裁剪；设置后所有页面即时生效。</p>
+        <p>自定义过头像后，会出现「恢复我的默认头像 / 恢复小刻默认头像」选项，点击即可还原。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>第三方分享的内容是怎么显示的？</summary>
+      <div class="answer">
+        <p>从微信、QQ、企业微信、飞书、钉钉等应用分享到小刻的内容，会以对应应用图标作为头像显示在对话中，方便你辨识来源，并自动归入仓库。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>如何清空所有记录？</summary>
+      <div class="answer">
+        <p>「我的 → 清空所有记录」，需连续点击两次确认。该操作不可撤销，请谨慎使用。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>如何联系我们？</summary>
+      <div class="answer">
+        <p>通过 GitHub 账户 <a href="https://github.com/terencetian" target="_blank" rel="noopener">github.com/terencetian</a> 联系开发者。</p>
+      </div>
+    </details>
+  </div>
+
+  <footer>© 2026 XIAOKE NOTES · 小刻手帐　·　本地优先，你的记录只属于你</footer>
+</div>
+</body>
+</html>
